@@ -49,6 +49,6 @@ export class Quiz {
     endGame() {
         alert("Perdiste")
         alert("Tu puntuacion era: " + this.player.score)
-        window.location.replace("http://localhost:5501/index.html")
+        window.location.replace("https://herweg.github.io/sofkau_challenge/index.html")
     }
 }
