@@ -30,8 +30,10 @@ export class UI {
         <h1>Result</h1>
         <h2>Tu puntaje es:${score}</h2>
         <button id="btnQuit" class="button">Salir</button>`
-        const element = document.getElementById("quiz")
-        element.innerHTML = quizEndHTML
+        const quiz = document.getElementById("quiz")
+        quiz.innerHTML = quizEndHTML
+        const quit = document.getElementById("btnQuit")
+        quit.addEventListener("click", () => window.location.replace("https://herweg.github.io/sofkau_challenge/index.html"))
     }
 
     showQuit(callback) {
