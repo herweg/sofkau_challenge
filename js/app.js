@@ -27,7 +27,7 @@ const renderPage = (quiz, ui) => {
         ui.showQuit(() => {
             quiz.player.saveScore()
             alert("Tu puntaje fue " + quiz.player.score)
-            window.location.replace("http://localhost:5501/index.html")
+            window.location.replace("https://herweg.github.io/sofkau_challenge/index.html")
         })
     }
 }
