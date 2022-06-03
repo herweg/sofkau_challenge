@@ -1,6 +1,7 @@
 import { questions } from "../data/questions.js"
 import { Player } from "../models/Player.js"
 import { Quiz } from "../models/Quiz.js"
+import { Scores } from "../models/Scores.js"
 import { UI } from "../models/UI.js"
 
 function main() {
@@ -16,6 +17,8 @@ const renderPage = (quiz, ui) => {
         ui.showScore(quiz.player.score)
 
     } else {
+        const tableScores = new Scores()
+        tableScores.addTableScore()
         quiz.getNewQuestion()
         var current = quiz.getCurrentQuestion()
         ui.showLevel(current.level)
