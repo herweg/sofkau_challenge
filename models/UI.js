@@ -29,7 +29,20 @@ export class UI {
         const quizEndHTML = `
         <h1>Result</h1>
         <h2>Tu puntaje es:${score}</h2>
-        <button id="btnQuit" class="button">Salir</button>`
+        <button id="btnQuit" class="button">Salir</button>
+        <h2>Historico de jugadores:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Score</th>
+                </tr>
+            <thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+        `
         const quiz = document.getElementById("quiz")
         quiz.innerHTML = quizEndHTML
         const quit = document.getElementById("btnQuit")
