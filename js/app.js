@@ -12,7 +12,7 @@ function main() {
 
 const renderPage = (quiz, ui) => {
     if (quiz.isEnded()) {
-        quiz.player.saveScore()
+        quiz.player.saveScore(quiz.player.score)
         ui.showScore(quiz.player.score)
 
     } else {
@@ -25,7 +25,7 @@ const renderPage = (quiz, ui) => {
             renderPage(quiz, ui)
         })
         ui.showQuit(() => {
-            quiz.player.saveScore()
+            quiz.player.saveScore(quiz.player.score)
             alert("Tu puntaje fue " + quiz.player.score)
             window.location.replace("https://herweg.github.io/sofkau_challenge/index.html")
         })
