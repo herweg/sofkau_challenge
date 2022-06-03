@@ -15,10 +15,10 @@ const renderPage = (quiz, ui) => {
     if (quiz.isEnded()) {
         quiz.player.saveScore(quiz.player.score)
         ui.showScore(quiz.player.score)
-
-    } else {
         const tableScores = new Scores()
         tableScores.addTableScore()
+
+    } else {
         quiz.getNewQuestion()
         var current = quiz.getCurrentQuestion()
         ui.showLevel(current.level)
